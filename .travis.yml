@@ -1,0 +1,5 @@
+language: node_js
+after_success:
+  - npx sls deploy --stage staging --aliases staging.leancoff.ee
+  - npx sls client deploy --no-confirm --stage staging
+cache: yarn
